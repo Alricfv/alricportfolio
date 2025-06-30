@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alric's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Simple animation CSS -->
+    <link rel="stylesheet" href="scroll-animation.css">
+</head>
+<body>
+    <!-- Animation overlay that covers the entire screen initially -->
+    <div id="animation-overlay">
+        <div class="typing-container">
+            <div id="typing-role"></div>
+            <div id="typing-name"></div>
+            <div id="typing-university"></div>
+        </div>
+    </div>
+    
+   <div id="header" class="content-section">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>AI Tech Solution Provider</p>
+                <h1>Hey, I'm <span>Alric Thilak</span></h1>
+                <h2>Student at UoY, UK</h2>
+            </div>
+        </div>
+    </div> 
+    <!---==========================Projects section========================== -->
+    <div id="projects" class="content-section">
+        <div class="container">
+            <!-- The h1 should be outside the list for better structure -->
+            <h1 class="sub-title scroll-fade-up">My Work</h1>
+            <div class="project-list">
+                <!-- Project 1 -->
+                <div class="project scroll-fade-up">
+                    <img src="images/project1.png" alt="Project 1">
+                    <div class="layer">
+                        <h3><sigma>Cancology.ai</sigma></h3>
+                        <p>An intelligent chatbot designed for oncology that automates cancer screening test recommendations using decision-tree logic.</p>
+                        <a href="https://github.com/Alricfv/Cancology.ai"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project scroll-fade-up">
+                     <img src="images/project2.png" alt="Project 2">
+                     <div class="layer">
+                        <h3>ProComm</h3>
+                        <p>ProComm is a tech startup focused on improving speech performance in public speaking and one-on-one conversations.
+                          It analyzes both audio and transcript data to generate high-quality, actionable feedback — helping users develop clarity, tone, and delivery through data-driven insights.</p>
+                        <a href="https://github.com/Alricfv/ProCommReact"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- Add a third project if you like -->
+            </div>
+        </div>
+    </div>
+   <!---==========================about me========================== -->
+    <div id="about" class="content-section">
+        <div class="container">
+            <div class ="row">
+                <div class="about-col-1 scroll-fade-up">
+                    <img src="images/Alric.png" alt="About Me">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title scroll-fade-up">About Me</h1>
+                    <p class="descriptivetext scroll-fade-up">
+                        Confident in <sigma>understanding domain-specific challenges</sigma> and building <sigma>practical,
+                        scalable solutions</sigma> that integrate into <sigma>professional environments</sigma>.
+                    </p>
+                    
+                    <div class="tab-titles scroll-fade-up">
+                        <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-content-container">
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li class="scroll-fade-up">
+                                    <span>Domain Specific Workflow Automation</span><br>
+                                    <sigma>
+                                    Design intelligent automation systems for healthcare & specialized fields by combining structured
+                                    logic, AI, and full-stack development. Turn manual workflows into scalable tools — from clinical decision
+                                    trees to ML-powered feedback systems. 
+                                    </sigma>
+                                </li>
+                            <li class="scroll-fade-up">
+                                <span>Devops & Deployment</span><br>
+                                <sigma>
+                                Certified Azure AI Engineer Associate with a focus on deploying and
+                                maintainining full-stack applications using platforms like 
+                                Azure, Digital Ocean, and Vercel. Handle version 
+                                controls (through Git/Github), environment setup, and DevOps practices. 
+                                </sigma>
+                            </li>
+                            <li class="scroll-fade-up">
+                                <span>Front-End development</span><br>
+                                <sigma>
+                                Proficient in building responsive, user-friendly interfaces using HTML, 
+                                CSS, and JavaScript. Experienced with frameworks like React and Next.js to create
+                                dynamic web applications that enhance user experience.
+                                </sigma>
+                            </li>  
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Experience">
+                        <ul>
+                            <li>
+                                <span>AI Engineer Intern 2025-Present</span><br>
+                                <sigma>
+                                Independently developed and engineered an end-to-end AI chatbot
+                                for oncologists, streamlining preliminary patient consultations by
+                                intelligently recommending tests and providing health suggestions.
+                                <br><br>
+                                Opportunity provided by Dr Kofi Appiah, senior lecturer at the University of York's
+                                department of computer science.
+                                </sigma>
+                            </li>
+                            <li>
+                                <span>ProComm 2023 - Present</span><br>
+                                <sigma>
+                                Spearheaded ground-up development of a comprehensive web
+                                application for public speaking improvement, analyzing speech data
+                                to provide actionable insights.Engineered a custom Python API for 
+                                emotion recognition, integrating ML models for real-time tone 
+                                feedback and personalized suggestions
+                                <br><br>
+                                Developed the dynamic React.js front-end and scalable Python backend,
+                                handling data processing, APIs, and authentication. Managed end-to-end
+                                deployment and maintenance on Microsoft Azure VM, ensuring continuous uptime
+                                and performance
+                                </sigma>
+                            </li>
+                            <li>
+                                <span>Hackathon Prize Winner</span><br>
+                                <sigma>
+                                Secured a 2nd Place in the innovation category for building a biometric authorization system
+                                in under an hour utilizing OpenCV and Flask + HTML, CSS & React.js, this achievement showcases my ability to 
+                                rapidly developpractical solutions under pressure, demonstrating both technical skills and innovative thinking.
+                                </sigma>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li>
+                                <span>Integrated Masters of Engineering in Computer Science with Artificial Intelligence</span><br>
+                                <sigma>University of York, UK - Expected Graduation: 2028</sigma>
+                            </li>
+                            <li>
+                                <span>Microsoft Certified Azure AI-102</span><br>
+                                <sigma>
+                                Completed a certification program granting me the title of an Azure AI Engineer Associate,
+                                focusing on Azure AI technologies and their applications in real-world scenarios
+                                ranging from Azure Cognitive Services to Azure OpenAI services such as Whisper.
+                                </sigma>
+                            </li>
+                        </ul>
+                    </div>
+                    </div> <!-- Closing tag for tab-content-container -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!---==========================services========================== -->
+
+    <div id="services" class="content-section">
+        <div class = "container">
+            <h1 class="sub-title scroll-fade-up">
+                Services Offered
+            </h1>
+            <div class="services-list">
+                <div>
+                    <h2>
+                        
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname) {
+        // Don't do anything if the clicked tab is already active
+        if (event.currentTarget.classList.contains("active-link")) {
+            return;
+        }
+        
+        // Handle tab link highlight
+        for (let tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        event.currentTarget.classList.add("active-link");
+        
+        // Find the currently active tab
+        let activeTab = null;
+        for (let i = 0; i < tabcontents.length; i++) {
+            if (tabcontents[i].classList.contains("active-tab")) {
+                activeTab = tabcontents[i];
+                break;
+            }
+        }
+        
+        // Get the tab we want to activate
+        const newTab = document.getElementById(tabname);
+        
+        // If same tab, do nothing
+        if (activeTab === newTab) return;
+        
+        // If there's an active tab, start transition
+        if (activeTab) {
+            // First, begin fade out of current content
+            activeTab.style.opacity = "0";
+            activeTab.style.transform = "translateX(-20px)";
+            
+            // Prepare the new tab to slide in from the right
+            newTab.style.transform = "translateX(20px)";
+            newTab.style.opacity = "0";
+            
+            // After fade out completes, switch tabs
+            setTimeout(() => {
+                // Remove active class from current tab
+                activeTab.classList.remove("active-tab");
+                
+                // Add active class to selected tab
+                newTab.classList.add("active-tab");
+                
+                // Trigger the fade-in animation
+                setTimeout(() => {
+                    newTab.style.opacity = "1";
+                    newTab.style.transform = "translateX(0)";
+                }, 50);
+            }, 300); // Time should be less than the CSS transition time
+        } else {
+            // If no active tab, just activate the selected one
+            newTab.classList.add("active-tab");
+            newTab.style.opacity = "1";
+            newTab.style.transform = "translateX(0)";
+        }
+    }
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Get references to the elements
+        const overlay = document.getElementById('animation-overlay');
+        const typingName = document.getElementById('typing-name');
+        const typingRole = document.getElementById('typing-role');
+        const typingUniversity = document.getElementById('typing-university');
+        const contentSections = document.querySelectorAll('.content-section');
+        const typingContainer = document.querySelector('.typing-container');
+        
+        // Text content for typing elements
+        const roleText = "AI Tech Solution Provider";
+        const nameText = "Hey, I'm Alric Thilak";
+        const universityText = "Student at UoY, UK";
+        
+        // Function to simulate typing effect with real character-by-character appearance
+        function typeText(element, text) {
+            return new Promise(resolve => {
+                // Create two span elements: one for typed text and one for the cursor
+                const typedTextSpan = document.createElement('span');
+                const cursorSpan = document.createElement('span');
+                cursorSpan.classList.add('typing-cursor');
+                cursorSpan.innerHTML = '|';
+                
+                // Clear the element and append our spans
+                element.textContent = '';
+                element.appendChild(typedTextSpan);
+                element.appendChild(cursorSpan);
+                element.style.opacity = "1"; // Make visible
+                
+                let i = 0;
+                const typingSpeed = 0.2; // milliseconds per character
+                
+                // Add random variation to typing speed for realistic effect
+                function getRandomTypingDelay() {
+                    return Math.random() * 20 + 30; 
+                }
+                
+                function type() {
+                    if (i < text.length) {
+                        typedTextSpan.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(type, getRandomTypingDelay());
+                    } else {
+                        // Typing complete
+                        setTimeout(resolve, 500); // Pause after typing completes
+                    }
+                }
+                
+                type(); // Start typing
+            });
+        }
+        
+        // Calculate the final position where the text should align with header
+        function calculateFinalPosition() {
+            // Get header text position
+            const headerTextContainer = document.querySelector('.header-text');
+            if (!headerTextContainer) return { x: '10%', y: '20%' }; // Default fallback
+            
+            // Get the bounding rectangles
+            const headerRect = headerTextContainer.getBoundingClientRect();
+            const overlayRect = typingContainer.getBoundingClientRect();
+            
+            // Calculate transform values
+            // We want to move from center to a position aligned with the header text
+            const translateX = ((headerRect.left - overlayRect.left) / window.innerWidth) * 100;
+            const translateY = ((headerRect.top - overlayRect.top) / window.innerHeight) * 100;
+            
+            return {
+                x: `${translateX}%`,
+                y: `${translateY}%`
+            };
+        }
+        
+        // Execute the animation sequence
+        async function runAnimation() {
+            // Initial delay
+            await new Promise(resolve => setTimeout(resolve, 500));
+            
+            // Type the name first
+            await typeText(typingName, nameText);
+            
+            // After name appears, move role element above name and create space
+            await new Promise(resolve => {
+                // Give the browser a moment to finish rendering the name
+                setTimeout(() => {
+                    // Create space for the role to appear above
+                    typingName.style.marginTop = "15px";
+                    // Use flex order to move role above name
+                    typingRole.style.order = "-1";
+                    resolve();
+                }, 200);
+            });
+            
+            // Now type the role (which will appear above the name)
+            await typeText(typingRole, roleText);
+            
+            // Finally type the university
+            await typeText(typingUniversity, universityText);
+            
+            // Pause before transitioning
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            
+            // Get the final position for the text
+            const finalPosition = calculateFinalPosition();
+            
+            // Move the typing container to align with the header text
+            typingContainer.style.transform = `translate(${finalPosition.x}, ${finalPosition.y})`;
+            typingContainer.style.opacity = '0.9';
+            
+            // Wait for movement to complete
+            await new Promise(resolve => setTimeout(resolve, 700));
+            
+            // Fade out overlay and fade in content
+            overlay.classList.add('fade-out');
+            
+            // Fade in content
+            contentSections.forEach(section => {
+                section.classList.add('fade-in');
+            });
+            
+            // Remove overlay after fade completes
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 1000);
+        }
+        
+        // Start the animation
+        runAnimation();
+    });
+</script>
+
+<script>
+    // Initialize all tabs on page load to ensure proper positioning
+    document.addEventListener("DOMContentLoaded", function() {
+        const allTabContents = document.getElementsByClassName("tab-contents");
+        for (let i = 0; i < allTabContents.length; i++) {
+            // Initially position non-active tabs off to the right
+            if (!allTabContents[i].classList.contains("active-tab")) {
+                allTabContents[i].style.transform = "translateX(20px)";
+                allTabContents[i].style.opacity = "0";
+            }
+        }
+    });
+</script>
+
+<script src="scroll-animation.js"></script>
+
+<!-- Removed AOS refresh script as we're using our custom scroll animation -->
+
+</body>
+</html>
