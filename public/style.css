@@ -402,6 +402,9 @@ sigma{
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
 .service::before {
@@ -436,6 +439,7 @@ sigma{
     color: white;
     position: relative;
     padding-bottom: 12px;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .service h2::after {
@@ -456,6 +460,8 @@ sigma{
 .service p{
     line-height: 1.6;
     margin-bottom: 20px;
+    flex-grow: 1;
+    transition: transform 0.5s ease, color 0.5s ease;
 }
 
 .service:hover{
@@ -467,6 +473,16 @@ sigma{
 .service:hover i{
     color: #fa7101;
     transform: translateY(-5px) scale(1.1);
+}
+
+.service:hover h2{
+    transform: translateY(-5px);
+    color: #fa7101;
+}
+
+.service:hover p{
+    transform: translateY(-5px);
+    color: #ddd;
 }
 
 .learn-more{
@@ -481,6 +497,8 @@ sigma{
     border-radius: 30px;
     transition: color 0.3s, background 0.3s, border-color 0.3s;
     background: rgba(250, 113, 1, 0.05);
+    align-self: center;
+    margin-top: auto;
 }
 
 .learn-more i{
