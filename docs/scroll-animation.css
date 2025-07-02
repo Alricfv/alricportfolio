@@ -4,10 +4,18 @@
 .scroll-fade-up {
   opacity: 0;
   transform: translateY(60px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: opacity, transform;
 }
 
 .scroll-visible {
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+/* Add staggered animations for lists */
+.scroll-fade-up:nth-child(1) { transition-delay: 0.1s; }
+.scroll-fade-up:nth-child(2) { transition-delay: 0.2s; }
+.scroll-fade-up:nth-child(3) { transition-delay: 0.3s; }
+.scroll-fade-up:nth-child(4) { transition-delay: 0.4s; }
