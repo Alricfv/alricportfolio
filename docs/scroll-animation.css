@@ -1,0 +1,13 @@
+/* Simple Scroll Animation
+   This is a standalone animation system to avoid conflicts */
+
+.scroll-fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

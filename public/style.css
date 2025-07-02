@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color: #fff;
+}
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/background.png);
+    background-size: cover; 
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    width: 140px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 10px 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #7008e8;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+    transition: 0.1s;
+}
+
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #fa7101;
+}
+
+.header-text h2{
+    font-size: 45px;
+    margin-top: 5px;
+}
+
+/*=====================================Projects==============================================*/
+#projects{
+    padding: 50px 0;
+}
+.project-list{
+    display: flex; /* 1. Change display to flex */
+    justify-content: center; /* 2. Center the items horizontally */
+    flex-wrap: wrap; /* 3. Allow items to wrap on smaller screens */
+    gap: 40px; /* 4. Use gap for spacing (replaces grid-gap) */
+    margin-top: 50px;
+}
+.project{
+    flex-basis: 45%; /* 5. Set a base width for each project */
+    max-width: 600px; /* 6. Add a max-width to prevent them from getting too large */
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.project img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #7a7672);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #fa7101;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.project:hover img{
+    transform: scale(1.1);
+}
+.project:hover .layer{
+    height: 100%;
+}
+
+/*=====================================about==============================================*/
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+    justify-content: space-between;
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+.about-col-2{
+    padding-bottom: 100px;
+    flex-basis: 60%;
+    position: relative; /* Added for proper positioning of tab contents */
+}
+
+.sub-title{
+    font-size: 60px;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.descriptivetext{
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0px 40px;
+}
+
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fa7101;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+
+.tab-contents ul li span{
+    color: #fa7101;
+    font-size: 25px;
+    font-weight: 800;
+
+}
+
+sigma{
+    color: #fff;
+    font-weight: 600;
+}
+
+.tab-contents{
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateX(20px);
+    pointer-events: none;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    visibility: hidden;
+}
+
+.tab-contents.active-tab{
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+/* Tab content container styling */
+.tab-content-container {
+    position: relative;
+    min-height: 600px; /* Increased height to accommodate all content */
+    overflow: hidden;
+    margin-bottom: 40px; /* Add bottom margin for spacing */
+}
+
+/*=====================================Services==============================================*/
+
+#services{
+    padding: 30px 0;
+    color: #ababab;
+}
+
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* Animation styles */
+#animation-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1.5s ease-out;
+}
+
+.typing-container {
+    text-align: left;
+    width: 80%;
+    max-width: 800px;
+    transition: all 1.2s ease-out;
+    position: absolute;
+    z-index: 1010;
+    display: flex;
+    flex-direction: column;
+}
+
+#typing-name, #typing-role, #typing-university {
+    overflow: visible;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    opacity: 0;
+    color: #fff;
+    transition: opacity 0.5s;
+    position: relative;
+}
+
+#typing-name {
+    font-size: 60px;
+    font-weight: bold;
+    transition: margin-top 0.3s ease;
+}
+
+#typing-role {
+    font-size: 30px;
+    color: #fa7101;
+    margin-bottom: 5px;
+    transition: order 0.5s ease; /* Allow smooth transition when changing order */
+}
+
+#typing-university {
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.content-section {
+    opacity: 0;
+    transition: opacity 1.5s ease-in;
+}
+
+/* Animation keyframes */
+
+
+
+
+/* Animation keyframes no longer needed for class-based typing */
+
+
+.final-position {
+    transform: translate(10%, 20%) !important;
+    opacity: 0.9 !important;
+    z-index: 100;
+}
+
+.fade-out {
+    opacity: 0 !important;
+    pointer-events: none;
+}
+
+.fade-in {
+    opacity: 1 !important;
+}
+
+.typing-cursor {
+    display: inline-block;
+    color: #fa7101;
+    font-weight: bold;
+    font-size: 120%; /* Make cursor slightly larger */
+    animation: blink-caret 0.75s step-end infinite;
+    margin-left: 2px;
+    position: relative;
+    top: -2px; /* Slight vertical adjustment */
+}
+
+@keyframes blink-caret {
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Animation styles moved to scroll-animation.css */
+
