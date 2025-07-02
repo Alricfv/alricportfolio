@@ -50,7 +50,7 @@
             <div class="project-list">
                 <!-- Project 1 -->
                 <div class="project scroll-fade-up">
-                    <img src="images/project1.png" alt="Project 1">
+                    <img src="images/Project1.png" alt="Project 1">
                     <div class="layer">
                         <h3><sigma>Cancology.ai</sigma></h3>
                         <p>An intelligent chatbot designed for oncology that automates cancer screening test recommendations using decision-tree logic.</p>
@@ -59,7 +59,7 @@
                 </div>
                 <!-- Project 2 -->
                 <div class="project scroll-fade-up">
-                     <img src="images/project2.png" alt="Project 2">
+                     <img src="images/Project2.png" alt="Project 2">
                      <div class="layer">
                         <h3>ProComm</h3>
                         <p>ProComm is a tech startup focused on improving speech performance in public speaking and one-on-one conversations.
@@ -256,12 +256,12 @@
                     <div class="social-icons">
                         <a href="https://github.com/Alricfv" target="_blank"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/alricthilak/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </div>
                 </div>
                 
                 <div class="contact-form scroll-fade-up">
-                    <form>
+                    <form id="contact-form">
+                        <!-- Using Google Sheets for form submission -->
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
                         <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
@@ -526,6 +526,9 @@
 </script>
 
 <!-- Removed AOS refresh script as we're using our custom scroll animation -->
+
+<!-- Google Sheets form integration -->
+<script src="form-script.js"></script>
 
 </body>
 </html>
