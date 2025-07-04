@@ -36,7 +36,7 @@
                 </ul>
             </nav>
             <div class="header-text">
-                <p>AI Tech Solution Provider</p>
+                <h2>AI Tech Solution Provider</h2>
                 <h1>Hey, I'm <span>Alric Thilak</span></h1>
                 <h2>Student at UoY, UK</h2>
             </div>
@@ -365,7 +365,7 @@
         
         // Text content for typing elements
         const roleText = "AI Tech Solution Provider";
-        const nameText = "Hey, I'm Alric Thilak";
+        const nameText = "Hey, I'm Alric";
         const universityText = "Student at UoY, UK";
         
         // Function to simulate typing effect with real character-by-character appearance
@@ -410,15 +410,15 @@
         function calculateFinalPosition() {
             // Get header text position
             const headerTextContainer = document.querySelector('.header-text');
-            if (!headerTextContainer) return { x: '10%', y: '20%' }; // Default fallback
+            if (!headerTextContainer) return { x: '0%', y: '20%' }; // Default fallback with left alignment
             
             // Get the bounding rectangles
             const headerRect = headerTextContainer.getBoundingClientRect();
             const overlayRect = typingContainer.getBoundingClientRect();
             
-            // Calculate transform values
-            // We want to move from center to a position aligned with the header text
-            const translateX = ((headerRect.left - overlayRect.left) / window.innerWidth) * 100;
+            // For left alignment, we focus primarily on Y position (vertical alignment)
+            // But keep X at 0 or minimal value to stick to the left
+            const translateX = 0; // Keep at left edge
             const translateY = ((headerRect.top - overlayRect.top) / window.innerHeight) * 100;
             
             return {

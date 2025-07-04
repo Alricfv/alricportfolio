@@ -66,13 +66,12 @@ nav ul li a:hover::after{
 }
 
 .header-text{
-    margin-top: 20%;
+    margin-top: 15%; /* Reduced from 20% to move text higher */
     font-size: 30px;
     animation: fadeInUp 1.2s ease-out;
     max-width: 60%;
     position: relative;
     z-index: 2;
-    background-color: rgba(0,0,0,0.4);
     padding: 20px;
     border-radius: 10px;
 }
@@ -555,6 +554,8 @@ sigma{
     z-index: 1010;
     display: flex;
     flex-direction: column;
+    left: 10%; /* Add left positioning to stick to the left side */
+    right: auto; /* Ensure it doesn't stick to the right */
 }
 
 #typing-name, #typing-role, #typing-university {
@@ -599,7 +600,7 @@ sigma{
 
 
 .final-position {
-    transform: translate(10%, 20%) !important;
+    transform: translate(0%, 20%) !important; /* Changed from 10% to 0% to stick to left */
     opacity: 0.9 !important;
     z-index: 100;
 }
@@ -796,7 +797,20 @@ footer {
     /* Ensure background shows your face on mobile */
     #header {
         background-size: cover;
-        background-position: 80% center;
+        background-position: 65% center; /* Adjusted to move face more to the right */
+    }
+    
+    /* Left-align logo on mobile and exactly match the header-text alignment */
+    .logo {
+        margin-left: 15px; /* Exact same left margin as header text content */
+        text-align: left;
+        padding-left: 0; /* Remove padding and use margin instead for precise alignment */
+        width: 160px; /* Increased size for mobile */
+        display: block; /* Ensure block display for proper alignment */
+    }
+    
+    nav {
+        justify-content: flex-start; /* Align navigation to the left */
     }
     
     nav ul {
@@ -820,25 +834,26 @@ footer {
         margin: 25px;
     }
     
-    #header {
-        background-position: 80% center;  /* Adjust background position for mobile to show face */
-    }
+    /* This duplicate header rule is removed as it's overriding the earlier setting */
     
     .header-text {
-        margin-top: 50%;  /* Moved text up further */
+        margin-top: 40%;  /* Reduced from 50% to move text higher on mobile */
         font-size: 16px;
         max-width: 90%;  /* Allow more width on small screens */
-        margin-left: 5%;  /* Add some margin on the left */
-        background-color: rgba(0,0,0,0.6);  /* Darker background for better contrast */
-        padding: 15px;  /* Slightly less padding on mobile */
+        text-align: left; /* Left align header text on mobile */
+        margin-left: 0;   /* No left margin for the container */
+        padding: 0;      /* Remove padding from all sides */
+        padding-left: 15px; /* Single padding value for precise alignment */
     }
     
     .header-text h1 {
         font-size: 30px;
+        text-align: left; /* Ensure heading is left aligned */
     }
     
     .header-text h2 {
         font-size: 22px;
+        text-align: left; /* Ensure subheading is left aligned */
     }
     
     .about-col-1, .about-col-2 {
@@ -876,16 +891,41 @@ footer {
         object-fit: cover;  /* Ensure the image covers the area without distortion */
         max-height: 300px; /* Limit max height to prevent oversized images */
     }
+    
+    /* Ensure typing animation sticks to the left on mobile */
+    .typing-container {
+        left: 5%; /* Less margin on mobile */
+        width: 90%; /* Wider on mobile */
+    }
 }
 
 /* Additional media query for smaller phones to ensure face visibility */
 @media only screen and (max-width: 480px) {
     #header {
-        background-position: 85% center; /* Move further right on smaller screens */
+        background-position: 70% center; /* Moved even further right on smaller screens */
+    }
+    
+    /* Reinforce left alignment for very small screens */
+    .container {
+        padding: 10px 5%; /* Reduce side padding to give more space */
     }
     
     .header-text {
-        margin-top: 60%; /* Move text up a bit more on smaller screens */
+        margin-top: 45%; /* Reduced to move text higher on small screens */
         max-width: 70%; /* Ensure text doesn't overlap with face */
+        padding-left: 5px; /* Exact same padding as logo margin for perfect alignment */
+        text-align: left; /* Explicitly set text alignment to left */
+        margin-left: 0;   /* No margin */
+    }
+    
+    /* Ensure logo and text have exactly the same alignment on very small screens */
+    .logo {
+        width: 140px; /* Increased size for small screens */
+        margin-left: 5px; /* Match the container padding */
+        padding-left: 0;
+    }
+    
+    nav {
+        justify-content: flex-start; /* Reinforce left alignment */
     }
 }
