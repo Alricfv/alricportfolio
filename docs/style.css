@@ -135,6 +135,8 @@ nav ul li a:hover::after{
     border-radius: 12px;
     display: block;
     transition: transform 0.5s;
+    object-fit: cover;
+    aspect-ratio: 16/9;  /* Maintain a consistent aspect ratio */
 }
 .layer{
     width: 100%;
@@ -842,5 +844,16 @@ footer {
     
     .services-list {
         grid-template-columns: 1fr;
+    }
+    
+    /* Fix for project images on mobile */
+    .project {
+        flex-basis: 100%;  /* Make projects take full width on mobile */
+    }
+    
+    .project img {
+        height: auto;      /* Allow height to adjust proportionally */
+        object-fit: cover;  /* Ensure the image covers the area without distortion */
+        max-height: 300px; /* Limit max height to prevent oversized images */
     }
 }
