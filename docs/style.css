@@ -15,7 +15,7 @@ body{
     height: 100vh;
     background-image: url(images/background.png);
     background-size: cover; 
-    background-position: center;
+    background-position: center right;  /* Changed to center right to show more of the face */
 }
 .container{
     padding: 10px 10%;
@@ -787,6 +787,12 @@ footer {
 
 /* Media Queries for Responsiveness */
 @media only screen and (max-width: 768px) {
+    /* Ensure background shows your face on mobile */
+    #header {
+        background-size: cover;
+        background-position: 80% center;
+    }
+    
     nav ul {
         position: fixed;
         top: 0;
@@ -808,9 +814,14 @@ footer {
         margin: 25px;
     }
     
+    #header {
+        background-position: 80% center;  /* Adjust background position for mobile to show face */
+    }
+    
     .header-text {
-        margin-top: 100%;
+        margin-top: 70%;  /* Reduced from 100% to move text up */
         font-size: 16px;
+        max-width: 80%;  /* Prevent text from overlapping face */
     }
     
     .header-text h1 {
@@ -855,5 +866,17 @@ footer {
         height: auto;      /* Allow height to adjust proportionally */
         object-fit: cover;  /* Ensure the image covers the area without distortion */
         max-height: 300px; /* Limit max height to prevent oversized images */
+    }
+}
+
+/* Additional media query for smaller phones to ensure face visibility */
+@media only screen and (max-width: 480px) {
+    #header {
+        background-position: 85% center; /* Move further right on smaller screens */
+    }
+    
+    .header-text {
+        margin-top: 60%; /* Move text up a bit more on smaller screens */
+        max-width: 70%; /* Ensure text doesn't overlap with face */
     }
 }
