@@ -15,7 +15,7 @@ body{
     height: 100vh;
     background-image: url(images/background.png);
     background-size: cover; 
-    background-position: center right;  /* Changed to center right to show more of the face */
+    background-position: 85% center;  /* Shifted further right to show more of the face */
 }
 .container{
     padding: 10px 10%;
@@ -69,6 +69,12 @@ nav ul li a:hover::after{
     margin-top: 20%;
     font-size: 30px;
     animation: fadeInUp 1.2s ease-out;
+    max-width: 60%;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .header-text h1{
@@ -819,9 +825,12 @@ footer {
     }
     
     .header-text {
-        margin-top: 70%;  /* Reduced from 100% to move text up */
+        margin-top: 50%;  /* Moved text up further */
         font-size: 16px;
-        max-width: 80%;  /* Prevent text from overlapping face */
+        max-width: 90%;  /* Allow more width on small screens */
+        margin-left: 5%;  /* Add some margin on the left */
+        background-color: rgba(0,0,0,0.6);  /* Darker background for better contrast */
+        padding: 15px;  /* Slightly less padding on mobile */
     }
     
     .header-text h1 {
